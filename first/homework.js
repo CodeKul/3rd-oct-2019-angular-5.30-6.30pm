@@ -9,6 +9,7 @@
  *  - Rs. 20892 => convert number to words
  *  - age calculation => as explained in js
  *  - matrix operations => add, sub and multiplication 
+ *  - https://www.youtube.com/watch?v=PkZNo7MFNFg complete this video
  * 
  * 
  */
