@@ -10,6 +10,9 @@
  *  - age calculation => as explained in js
  *  - matrix operations => add, sub and multiplication 
  *  - https://www.youtube.com/watch?v=PkZNo7MFNFg complete this video
- * 
- * 
- */
+ **/
+
+ let carName = 'audi'
+ carName = 45
+ carName = true
+
