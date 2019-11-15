@@ -1,0 +1,4 @@
+:host ::ng-deep p {
+    border : 1px solid red;
+    color : red;
+}

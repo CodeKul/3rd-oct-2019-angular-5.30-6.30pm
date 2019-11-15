@@ -391,6 +391,124 @@
           }
         }
       }
+    },
+    "view-encapsulation": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/view-encapsulation",
+      "sourceRoot": "projects/view-encapsulation/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/view-encapsulation",
+            "index": "projects/view-encapsulation/src/index.html",
+            "main": "projects/view-encapsulation/src/main.ts",
+            "polyfills": "projects/view-encapsulation/src/polyfills.ts",
+            "tsConfig": "projects/view-encapsulation/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/view-encapsulation/src/favicon.ico",
+              "projects/view-encapsulation/src/assets"
+            ],
+            "styles": [
+              "projects/view-encapsulation/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/view-encapsulation/src/environments/environment.ts",
+                  "with": "projects/view-encapsulation/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "view-encapsulation:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "view-encapsulation:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "view-encapsulation:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/view-encapsulation/src/test.ts",
+            "polyfills": "projects/view-encapsulation/src/polyfills.ts",
+            "tsConfig": "projects/view-encapsulation/tsconfig.spec.json",
+            "karmaConfig": "projects/view-encapsulation/karma.conf.js",
+            "assets": [
+              "projects/view-encapsulation/src/favicon.ico",
+              "projects/view-encapsulation/src/assets"
+            ],
+            "styles": [
+              "projects/view-encapsulation/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/view-encapsulation/tsconfig.app.json",
+              "projects/view-encapsulation/tsconfig.spec.json",
+              "projects/view-encapsulation/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/view-encapsulation/e2e/protractor.conf.js",
+            "devServerTarget": "view-encapsulation:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "view-encapsulation:serve:production"
+            }
+          }
+        }
+      }
     }},
   "defaultProject": "basic-app"
 }
