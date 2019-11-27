@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-muted">Data Binding</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <p> Project Title is {{title}} </p>
+      <p> <input type="{{type}}"> </p>
+      <p> Time elapsed so far is </p>
+    </div>
+  </div>
+  <div class="row ">
+    <div class="col-md-12">
+      <input type="text" [style.border]="brd" [style.color]="'blue'">
+      <p class="mt-1" [class.alert]="true" [class.alert-info]="true" [attr.role]="'alert'">Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Consequatur corrupti voluptatem ipsam numquam alias atque iste? Deleniti neque
+        molestias, laudantium accusamus fugit iure repellendus hic quos, ipsum, maiores nihil atque.</p>
+
+      <p [attr.hi]="'hello'" class="p-3"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque excepturi
+        rerum sapiente facilis possimus natus, cum odit voluptatibus quod repellat optio recusandae nobis maiores at
+        molestias quaerat dicta quidem officia!</p>
+
+      <input type="text" [style]="style">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3" class="box" (mouseenter)="onMouseEnterDfkfjjlaksdfjlsajvdk($event)"
+      (mouseleave)="onMouseLeave($event)" [style.background]="bxBkCl"> </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <input type="text" [value]="title">
+      <input type="button" (click)="onBtnClk($event)" class="btn btn-primary" value="Okay">
+    </div>
+  </div>
+</div>
