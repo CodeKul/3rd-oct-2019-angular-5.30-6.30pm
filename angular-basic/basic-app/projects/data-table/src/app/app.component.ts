@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'data-table';
 
   data = new Array<TabRow>()
+  clickedRow: TabRow
 
   fetchData() {
     // it fetches the data for server
@@ -20,6 +21,12 @@ export class AppComponent {
   }
 
   akdjfjhaldflsaudfh(row: TabRow) {
+    this.clickedRow = row
     console.log(`Delete Clicked`, row)
+    this.data.forEach((dt, ind) => {
+      if (dt.id === row.id) {
+        this.data.splice(ind, 1)
+      }
+    })
   }
 }

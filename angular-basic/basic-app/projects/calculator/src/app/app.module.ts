@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { MathOpsComponent } from './math-ops/math-ops.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MathOpsComponent
   ],
   imports: [
     BrowserModule
