@@ -1,10 +1,15 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef, OnInit } from '@angular/core';
 
 @Directive({
   selector: '[appMagic]'
 })
-export class MagicDirective {
+export class MagicDirective implements OnInit {
 
-  constructor() { }
+  constructor(
+    private elRf: ElementRef
+  ) { }
 
+  ngOnInit() {
+    console.log(this.elRf)
+  }
 }
