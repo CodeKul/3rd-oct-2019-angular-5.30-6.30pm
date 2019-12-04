@@ -9,33 +9,25 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row">{{rows[0]?.id}}</th>
-            <td>{{rows[0]?.item}}</td>
-            <td>{{rows[0]?.qty}}</td>
-            <td>{{rows[0]?.price}}</td>
-            <td> <u (click)="onRowDelete(rows[0])">Delete</u> </td>
+        <tr class="border">
+            <th scope="col"><input type="text"></th>
+            <th scope="col"><input type="text"></th>
+            <th scope="col"><input type="text"></th>
+            <th scope="col"><input type="text"></th>
+            <th scope="col"><u (click)="onAdd()">Add</u></th>
         </tr>
         <tr>
-            <th scope="row">{{rows[1]?.id}}</th>
-            <td>{{rows[1]?.item}}</td>
-            <td>{{rows[1]?.qty}}</td>
-            <td>{{rows[1]?.price}}</td>
-            <td> <u (click)="onRowDelete(rows[1])">Delete</u> </td>
+            <th scope="col"><input type="text" (keyup)="sort()"></th>
+            <th scope="col"><input type="text" (keyup)="sort()"></th>
+            <th scope="col"><input type="text" (keyup)="sort()"></th>
+            <th scope="col"><input type="text" (keyup)="sort()"></th>
         </tr>
-        <tr>
-            <th scope="row">{{rows[2]?.id}}</th>
-            <td>{{rows[2]?.item}}</td>
-            <td>{{rows[2]?.qty}}</td>
-            <td>{{rows[2]?.price}}</td>
-            <td> <u (click)="onRowDelete(rows[2])">Delete</u> </td>
-        </tr>
-        <tr>
-            <th scope="row">{{rows[3]?.id}}</th>
-            <td>{{rows[3]?.item}}</td>
-            <td>{{rows[3]?.qty}}</td>
-            <td>{{rows[3]?.price}}</td>
-            <td> <u (click)="onRowDelete(rows[3])">Delete</u> </td>
+        <tr *ngFor="let row of rows">
+            <th scope="row">{{row?.id}}</th>
+            <td>{{row?.item}}</td>
+            <td>{{row?.qty}}</td>
+            <td>{{row?.price}}</td>
+            <td> <u (click)="onRowDelete(row)">Delete</u> </td>
         </tr>
     </tbody>
 </table>

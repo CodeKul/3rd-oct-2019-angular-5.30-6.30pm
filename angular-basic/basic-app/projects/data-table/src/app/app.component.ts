@@ -18,7 +18,20 @@ export class AppComponent {
     this.data.push({ id: 2, item: 'pc', qty: 3, price: 30000 })
     this.data.push({ id: 3, item: 'pc', qty: 3, price: 30000 })
     this.data.push({ id: 4, item: 'pc', qty: 3, price: 30000 })
+    this.data.push({ id: 5, item: 'pc', qty: 3, price: 30000 })
+    this.data.push({ id: 6, item: 'pc', qty: 3, price: 30000 })
+    this.data.push({ id: 7, item: 'pc', qty: 3, price: 30000 })
+    this.data.push({ id: 8, item: 'pc', qty: 3, price: 30000 })
+    this.data.push({ id: 9, item: 'pc', qty: 3, price: 30000 })
+    this.data.push({ id: 10, item: 'pc', qty: 3, price: 30000 })
+    this.data.push({ id: 11, item: 'pc', qty: 3, price: 30000 })
+    this.data.push({ id: 12, item: 'pc', qty: 3, price: 30000 })
+    this.data.push({ id: 13, item: 'pc', qty: 3, price: 30000 })
+    this.data.push({ id: 14, item: 'pc', qty: 3, price: 30000 })
+    this.data.push({ id: 15, item: 'pc', qty: 3, price: 30000 })
   }
+
+ 
 
   akdjfjhaldflsaudfh(row: TabRow) {
     this.clickedRow = row

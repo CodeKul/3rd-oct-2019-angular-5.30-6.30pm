@@ -24,4 +24,12 @@ export class DataTabComponent implements OnInit {
     console.log(`Delete Clicked`, row)
     this.deleteRow.emit(row)
   }
+
+  sort() {
+    
+  }
+
+  onAdd() {
+    this.rows.push({ id: 1, item: 'pc', qty: 3, price: 30000 })
+  }
 }

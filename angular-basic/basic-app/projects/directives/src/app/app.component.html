@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <strong><i>Directives</i></strong>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <p class="alert alert-info" *ngIf="isPara">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, expedita ea beatae repellendus magni tenetur
+        asperiores exercitationem necessitatibus. Eius rem cum repellendus unde tempore autem corrupti eveniet quis sunt
+        odio!
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <ng-template [ngIf]="isPara">
+        <p class="alert alert-info">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, expedita ea beatae repellendus magni tenetur
+          asperiores exercitationem necessitatibus. Eius rem cum repellendus unde tempore autem corrupti eveniet quis
+          sunt odio!
+        </p>
+      </ng-template>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <input type="button" class="btn btn-info" value="okay" (click)="onOkay()">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <ul>
+        <li *ngFor="let mb of mobs">{{mb}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" [ngStyle]="bsOb">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi voluptatum accusantium nihil. Magnam maiores
+      quibusdam a rem iusto corrupti numquam natus velit necessitatibus perspiciatis nihil, quae, est ipsum voluptatibus
+      ipsam.
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" [ngClass]="{'alert' : isAl, 'alert-info' : isAl}">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi voluptatum accusantium nihil. Magnam maiores
+      quibusdam a rem iusto corrupti numquam natus velit necessitatibus perspiciatis nihil, quae, est ipsum voluptatibus
+      ipsam.
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <input type="button" value="Class It" class="btn btn-info" (click)="isAl = !isAl">
+    </div>
+  </div>
+</div>
