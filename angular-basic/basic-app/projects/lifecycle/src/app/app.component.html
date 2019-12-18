@@ -1,0 +1,9 @@
+<div>
+  <app-lyf [dt]="title" *ngIf="isVs"></app-lyf>
+</div>
+
+<div>
+  <button (click)="isVs = !isVs">Okay</button>
+  <button (click)="dt()">Date</button>
+  <button (click)="hi()">Say Hi</button>
+</div>
