@@ -1,1 +1,17 @@
 <p>chat works!</p>
+
+<p>
+    You are chatting with {{usNm}} 
+</p>
+<p>
+    You are in the Group {{data}}
+</p>
+
+<div>
+    <input type="button" value="SMS" class="btn btn-info" (click)="onType(1)">
+    <input type="button" value="Internet" class="btn btn-warning" (click)="onType(2)">
+</div>
+
+<div >
+    <router-outlet></router-outlet>
+</div>

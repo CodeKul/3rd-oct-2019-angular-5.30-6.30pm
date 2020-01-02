@@ -9,13 +9,17 @@ import { Router } from '@angular/router';
 export class OtherComponent implements OnInit {
 
   constructor(
-    private router : Router
+    private router: Router
   ) { }
 
   ngOnInit() {
   }
 
   toChat() {
-    this.router.navigate(['chat'])
+    this.router.navigate(['chat', 'ksdfdhskfh'], {
+      queryParams: {
+        data: 'logic'
+      }
+    })
   }
 }
