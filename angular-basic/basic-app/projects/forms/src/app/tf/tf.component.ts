@@ -9,6 +9,7 @@ import { NgForm } from '@angular/forms';
 export class TfComponent implements OnInit {
 
   myFrm: NgForm
+  emlPat = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
 
   edtObj = {
     pass : 'hi',
@@ -24,6 +25,7 @@ export class TfComponent implements OnInit {
   }
 
   mySub(frm: NgForm) {
+    console.log(frm)
     console.log(frm.value)
 
     console.log(this.edtObj)
