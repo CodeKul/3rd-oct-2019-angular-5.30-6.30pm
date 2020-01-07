@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 // https://demo.hasthemes.com/karen-preview/karen/index.html
+
+// https://glideup.dexignlab.com/demo/index.html
 @Component({
   selector: 'app-tf',
   templateUrl: './tf.component.html',
