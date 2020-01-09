@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <input type="button" value="Users" class="btn btn-info" (click)="fetchUsers()">
+    </div>
+  </div>
+  <div class="row">
+    <div class="card" style="width: 18rem;" *ngFor="let dt of users">
+      <img class="card-img-top" [src]="dt.avatar" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{dt?.title}}</h5>
+        <p class="card-text">{{dt?.first_name}} {{dt?.last_name}}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
