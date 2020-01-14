@@ -8,10 +8,16 @@
     <div class="card" style="width: 18rem;" *ngFor="let dt of users">
       <img class="card-img-top" [src]="dt.avatar" alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title">{{dt?.title}}</h5>
-        <p class="card-text">{{dt?.first_name}} {{dt?.last_name}}</p>
+        <h5 class="card-title">{{dt?.title | uppercase}}</h5>
+        <p class="card-text">{{dt?.first_name | uppercase | slice:0:3}} {{dt?.last_name | dt:2}}</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <p>Date {{dt | date:"dd MMM yyyy"}}</p>
+      <p>{{res | json}}</p>
     </div>
   </div>
 </div>

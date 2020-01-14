@@ -14,4 +14,12 @@ export class WebCl {
     users(): Observable<ResObj> {
         return this.http.get<ResObj>('https://reqres.in/api/users')
     }
+
+    save(obj: object): Observable<object> {
+        return this.http.post<object>('https://reqres.in/api/users', obj, {
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+    }
 }

@@ -12,16 +12,30 @@ export class AppComponent {
   title = 'http';
 
   users: Array<DataObj>
+  res : object
+  dt : Date
 
   constructor(
     private webCl: WebCl
-  ) {
+  ) { }
 
+  ngOnInit() {
+    this.webCl.save({
+      data: 'hi',
+      time: Date.now(),
+      location: 'pune',
+      isOkay: true
+    }).subscribe(res => {
+      this.res = res
+      console.log(res)
+    })
+    this.dt = new Date()
   }
 
   fetchUsers() {
     this.webCl.users().subscribe(res => this.users = res.data)
   }
+
  
 }
 
